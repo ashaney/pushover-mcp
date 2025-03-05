@@ -48,10 +48,62 @@ Sends a notification via Pushover.
 }
 ```
 
-## Demo
+## Using with Cursor
+
+### Method 1: Install Globally
+
+Run the MCP server using npx:
+
+```bash
+npx -y pushover-mcp@latest start --token YOUR_TOKEN --user YOUR_USER
+```
+
+In your Cursor IDE
+
+1. Go to `Cursor Settings` > `MCP`
+2. Click `+ Add New MCP Server`
+3. Fill in the form:
+   - Name: `Pushover Notification` (or any name you prefer)
+   - Type: `command`
+   - Command: `npx -y pushover-mcp@latest start --token YOUR_TOKEN --user YOUR_USER`
+
+
+### Method 2: Project-specific Configuration
+
+Add an `.cursor/mcp.json` file to your project:
+
+```json
+{
+  "mcpServers": {
+    "pushover": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "pushover-mcp@latest",
+        "start",
+        "--token",
+        "YOUR_TOKEN",
+        "--user", 
+        "YOUR_USER"
+      ]
+    }
+  }
+}
+```
+
+> **Note:** Replace `YOUR_TOKEN` & `YOUR_USER` with your tokens.
+
+### Using the Tool
+
+Once configured, the Pushover notification tool will be automatically available to the Cursor AI Agent. You can:
+
+1. The tool will be listed under `Available Tools` in MCP settings
+2. Agent will automatically use it when relevant
+3. You can explicitly ask Agent to send notifications
+
+By default, Agent will ask for approval before sending notifications. Enable "Yolo mode" in settings to allow automatic sending.
+
 ![Cursor Agent](media/cursor-agent.png)
-
-
 ## Development
 
 ```bash
