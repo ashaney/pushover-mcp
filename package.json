@@ -1,6 +1,6 @@
 {
   "name": "pushover-mcp",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "MCP for Pushover.net notifications",
   "author": "Ashik Nesin <mail@ashiknesin.com>",
   "license": "MIT",
