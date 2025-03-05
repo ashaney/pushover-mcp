@@ -91,7 +91,6 @@ Add an `.cursor/mcp.json` file to your project:
 }
 ```
 
-> **Note:** Replace `YOUR_TOKEN` & `YOUR_USER` with your tokens.
 
 ### Using the Tool
 
@@ -104,6 +103,32 @@ Once configured, the Pushover notification tool will be automatically available 
 By default, Agent will ask for approval before sending notifications. Enable "Yolo mode" in settings to allow automatic sending.
 
 ![Cursor Agent](media/cursor-agent.png)
+
+## Using with Roo Code
+Access the MCP settings by clicking “Edit MCP Settings” in Roo Code settings or using the “Roo Code: Open MCP Config” command in VS Code's command palette.
+
+```json
+{
+  "mcpServers": {
+    "pushover": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "pushover-mcp@latest",
+        "start",
+        "--token",
+        "YOUR_TOKEN",
+        "--user", 
+        "YOUR_USER"
+      ]
+    }
+  }
+}
+```
+3. The Pushover notification tool will be available to Roo Code's AI agents
+
+> **Note:** Replace `YOUR_TOKEN` & `YOUR_USER` with your Pushover credentials.
+
 ## Development
 
 ```bash
