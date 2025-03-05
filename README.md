@@ -2,7 +2,7 @@
 
 A [Model Context Protocol](https://modelcontextprotocol.io/introduction) implementation for sending notifications via [Pushover.net](https://pushover.net).
 
-![Cursor Agent](cursor-agent.png)
+![Cursor Agent](media/cursor-agent.png)
 
 ## Overview
 
