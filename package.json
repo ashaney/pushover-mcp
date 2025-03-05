@@ -1,6 +1,6 @@
 {
   "name": "pushover-mcp",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "MCP for Pushover.net notifications",
   "author": "Ashik Nesin <mail@ashiknesin.com>",
   "license": "MIT",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
+    "commander": "^13.1.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
