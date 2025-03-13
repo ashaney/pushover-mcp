@@ -1,4 +1,5 @@
 # Pushover MCP
+[![smithery badge](https://smithery.ai/badge/@AshikNesin/pushover-mcp)](https://smithery.ai/server/@AshikNesin/pushover-mcp)
 
 A [Model Context Protocol](https://modelcontextprotocol.io/introduction) implementation for sending notifications via [Pushover.net](https://pushover.net).
 
@@ -46,6 +47,17 @@ Sends a notification via Pushover.
     "priority": 1
   }
 }
+```
+
+
+## Installing
+
+### Installing via Smithery
+
+To install Pushover Notification for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@AshikNesin/pushover-mcp):
+
+```bash
+npx -y @smithery/cli install @AshikNesin/pushover-mcp --client claude
 ```
 
 ## Using with Cursor
