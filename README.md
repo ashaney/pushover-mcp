@@ -52,14 +52,6 @@ Sends a notification via Pushover.
 
 ## Installing
 
-### Installing via Smithery
-
-To install Pushover Notification for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@AshikNesin/pushover-mcp):
-
-```bash
-npx -y @smithery/cli install @AshikNesin/pushover-mcp --client claude
-```
-
 ## Using with Cursor
 
 ### Method 1: Install Globally
@@ -140,6 +132,14 @@ Access the MCP settings by clicking “Edit MCP Settings” in Roo Code settings
 3. The Pushover notification tool will be available to Roo Code's AI agents
 
 > **Note:** Replace `YOUR_TOKEN` & `YOUR_USER` with your Pushover credentials.
+
+## Installing via Smithery
+
+To install Pushover Notification for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@AshikNesin/pushover-mcp):
+
+```bash
+npx -y @smithery/cli install @AshikNesin/pushover-mcp --client claude
+```
 
 ## Development
 
