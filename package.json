@@ -1,18 +1,19 @@
 {
-  "name": "pushover-mcp",
-  "version": "1.0.0",
+  "name": "pushover-mcp-v2",
+  "version": "1.0.1",
   "description": "MCP for Pushover.net notifications",
   "author": "Ashik Nesin <mail@ashiknesin.com>",
+  "contributors": ["Aaron"],
   "license": "MIT",
-  "homepage": "https://github.com/AshikNesin/pushover-mcp",
+  "homepage": "https://github.com/ashaney/pushover-mcp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AshikNesin/pushover-mcp.git"
+    "url": "git+https://github.com/ashaney/pushover-mcp.git"
   },
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "pushover-mcp": "dist/cli.js"
+    "pushover-mcp-v2": "dist/cli.js"
   },
   "files": [
     "dist",

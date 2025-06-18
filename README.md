@@ -59,7 +59,7 @@ Sends a notification via Pushover.
 Run the MCP server using npx:
 
 ```bash
-npx -y pushover-mcp@latest start --token YOUR_TOKEN --user YOUR_USER
+npx -y pushover-mcp-v2@latest start --token YOUR_TOKEN --user YOUR_USER
 ```
 
 In your Cursor IDE
@@ -69,7 +69,7 @@ In your Cursor IDE
 3. Fill in the form:
    - Name: `Pushover Notification` (or any name you prefer)
    - Type: `command`
-   - Command: `npx -y pushover-mcp@latest start --token YOUR_TOKEN --user YOUR_USER`
+   - Command: `npx -y pushover-mcp-v2@latest start --token YOUR_TOKEN --user YOUR_USER`
 
 
 ### Method 2: Project-specific Configuration
@@ -83,7 +83,7 @@ Add an `.cursor/mcp.json` file to your project:
       "command": "npx",
       "args": [
         "-y",
-        "pushover-mcp@latest",
+        "pushover-mcp-v2@latest",
         "start",
         "--token",
         "YOUR_TOKEN",
@@ -108,6 +108,35 @@ By default, Agent will ask for approval before sending notifications. Enable "Yo
 
 ![Cursor Agent](media/cursor-agent.png)
 
+## Using with Claude Desktop
+
+To use with Claude Desktop, you need to add the MCP server to your Claude Desktop configuration:
+
+1. Open Claude Desktop settings
+2. Navigate to the MCP section
+3. Add the following configuration to your `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "pushover": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "pushover-mcp-v2@latest",
+        "start",
+        "--token",
+        "YOUR_TOKEN",
+        "--user", 
+        "YOUR_USER"
+      ]
+    }
+  }
+}
+```
+
+> **Note:** Replace `YOUR_TOKEN` & `YOUR_USER` with your Pushover credentials.
+
 ## Using with Roo Code
 Access the MCP settings by clicking “Edit MCP Settings” in Roo Code settings or using the “Roo Code: Open MCP Config” command in VS Code's command palette.
 
@@ -118,7 +147,7 @@ Access the MCP settings by clicking “Edit MCP Settings” in Roo Code settings
       "command": "npx",
       "args": [
         "-y",
-        "pushover-mcp@latest",
+        "pushover-mcp-v2@latest",
         "start",
         "--token",
         "YOUR_TOKEN",
